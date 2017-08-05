@@ -1,16 +1,23 @@
 
-
-
-class EditorModel():
-    lines = [""]
-
-    def lineLength(self, lineIndex):
-        if(lineIndex < self.lines.__len__()):
-            line = self.lines[lineIndex]
-            return len(line)
-        else:
-            return 0
-
-class Line():
+class Line:
     id = None
     text = ""
+
+    def __init__(self):
+        self.id = None
+        self.text = ""
+
+
+class EditorModel:
+    lines = []
+
+    def __init__(self):
+        line = Line()
+        self.lines.insert(0, line)
+
+    def line_length(self, line_index):
+        if line_index < len(self.lines):
+            line = self.lines[line_index]
+            return len(line.text)
+        else:
+            return 0

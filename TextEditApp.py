@@ -16,7 +16,7 @@ class Application(Frame):
 
 app = Application('Text Edit')
 app.geometry("1000x500+100+100")
-app.pack(fill="both",expand=1)
+app.pack(fill="both", expand=1)
 
 menu = AppMenu(app.master)
 

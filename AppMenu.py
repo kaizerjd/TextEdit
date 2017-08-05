@@ -8,5 +8,4 @@ class AppMenu(Menu):
         filemenu.add_command(label="Quit",command=master.quit)
         self.add_cascade(label="File",menu=filemenu)
 
-
         master.config(menu = self)
