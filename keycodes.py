@@ -1,4 +1,4 @@
-class keycodes:
+class Keycodes:
     left = 8124162
     down = 8255233
     right = 8189699

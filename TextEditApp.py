@@ -1,8 +1,8 @@
 from tkinter import Frame
 from AppMenu import AppMenu
-from EditorView import EditorView
-from EditorModel import EditorModel
-from EditorController import EditorController
+from CharacterEditorView import EditorView
+from CharacterEditorModel import EditorModel
+from CharacterEditorController import EditorController
 
 
 class Application(Frame):

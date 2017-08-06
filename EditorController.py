@@ -1,4 +1,4 @@
-from keycodes import keycodes
+from keycodes import Keycodes
 from EditorModel import *
 
 
@@ -30,23 +30,23 @@ class EditorController:
     def key_pressed(self, event):
         debug_str = "char: {0}, keycode: {1}".format(event.char, event.keycode)
         print(debug_str)
-        if event.keycode == keycodes.left:
+        if event.keycode == Keycodes.left:
             self.cursor_left()
             self.view.draw_cursor()
-        elif event.keycode == keycodes.up:
+        elif event.keycode == Keycodes.up:
             self.cursor_up()
             self.view.draw_cursor()
-        elif event.keycode == keycodes.right:
+        elif event.keycode == Keycodes.right:
             self.cursor_right()
             self.view.draw_cursor()
-        elif event.keycode == keycodes.down:
+        elif event.keycode == Keycodes.down:
             self.cursor_down()
             self.view.draw_cursor()
-        elif event.keycode == keycodes.enter:
+        elif event.keycode == Keycodes.enter:
             self.newline()
             self.view.draw_cursor()
             self.draw_all_lines()
-        elif event.keycode == keycodes.backspace:
+        elif event.keycode == Keycodes.backspace:
             self.backspace()
             self.view.draw_cursor()
             self.draw_all_lines()
