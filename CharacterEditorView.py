@@ -1,4 +1,5 @@
 from tkinter import Canvas
+from random import randint
 
 
 class EditorView(Canvas):
@@ -23,7 +24,18 @@ class EditorView(Canvas):
     def register(self, controller):
         self.controller = controller
 
-    def draw_char(self, char, x, y, selected = False):
+    def draw_all_chars(self, chars):
+        x = 0
+        y = 0
+        for c in chars:
+            if c == '\n':
+                x = 0
+                y += 1
+            else:
+                self.draw_char(c, x, y, False)
+                x += 1
+
+    def draw_char(self, char, x, y, selected=False):
         screen_x = self.left_margin + x * self.line_width
         screen_y = self.top_margin + y * self.line_height
         id = self.create_text(screen_x, screen_y,

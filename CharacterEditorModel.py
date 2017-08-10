@@ -1,8 +1,9 @@
 
 class EditorModel:
-    chars = [
-        't', 'h', 'i', 's', '\n',
-        'i', 's', '\n',
-        'a', '\n',
-        't', 'e', 's', 't', '\n'
-    ]
+    chars = []
+
+    def __init__(self):
+        for i in range(0, 100):
+            for j in range(0, 100):
+                self.chars.append('a')
+            self.chars.append('\n')
